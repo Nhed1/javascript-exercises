@@ -7,21 +7,22 @@ const subtract = function(x,y) {
 };
 
 const sum = function(array) {
-  let sum;
+  let sum=0;
 	for (let i = 0; i < array.length; i++) {
-    let value = array[i]
-    sum += value
+    sum += array[i]
   }
-
   return sum
 };
 
+console.log(sum([1,2,3,4]))
+
 const multiply = function(array) {
-  let mult;
+  let mult = 1;
   for (let i = 0; i < array.length; i++) {
-    let value = array[i]
-    mult *= value
-}
+    console.log(array[i])
+    mult *=  array[i]
+  }
+  return mult
 }
 
 const power = function(x, y) {
@@ -29,11 +30,12 @@ const power = function(x, y) {
 };
 
 const factorial = function(x) {
-  for (let i = 0; i <= x; i ++) {
-    x = i*(i-1) 
+  let fac = 1;
+  for (let i = 1; i <= x; i++){
+    let value = i
+    fac *= value
   }
-
-  return x
+  return fac
 }
 
 // Do not edit below this line
