@@ -1,13 +1,14 @@
-const removeFromArray = function(array, ...args) {
-    let elements = Array.from(args);
-    
-    for (let i = 0; i < elements.length; i ++){
-        let positionElement = array.indexOf(elements[i]);
-        let positionFinalElement = array.indexOf(elements[i]) + 1;
-        array.splice(positionElement, positionFinalElement)
+const removeFromArray = function(array, ...args)  {
+    let newArray = Array.from(args)
+
+    for (let i = 0; i < newArray.length; i++) {
+        let item = newArray[i];
+
+        if (array.includes(item)){
+            array.splice(array.indexOf(item), 1); // remove itens da lista
+        }
     }
     return array;
-    
 };
 
 
