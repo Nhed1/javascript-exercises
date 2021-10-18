@@ -6,7 +6,7 @@ const sumAll = function(...args) {
 
     for (let i = 0; i < array.length; i ++) {
         let elem = array[i]
-        if (typeof(elem) == 'number') {
+        if (typeof(elem) == 'number' && elem >= 0) {
             arraySum.push(elem)
         } else {
             return 'ERROR'
